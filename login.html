@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="login.css">
+        <title>Login Page | Cravings</title>
+        <style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .container {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 320px;
+    transition: all ease-in .2s;
+  }
+
+  .container:hover {
+    cursor: pointer;
+    box-shadow: 12px 12px 12px rgba(0, 0, 0, 0.1),
+    -10px -10px 10px white;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 50%;
+  }
+
+  h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #333;
+  }
+
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+
+  input:focus {
+    border-color: #ff6b6b;
+    outline: none;
+  }
+
+  .login {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .login:hover {
+    text-decoration: none;
+    background-color: #e75a5a;
+  }
+
+  a {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a[name="s"] span {
+    color: #444;
+  }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="images/logo.jpeg" alt="" class="logo">
+            <h2>Login</h2>
+            <input placeholder="Email address" type="email" name="email">
+            <input placeholder="Password" type="password" name="password">
+            <a href="home.html" class="login">Login</a>
+            <a name="f">Forgot Password?</a>
+            <a name="s">
+                <span>Dont have an account?</span> Sign up here
+            </a>
+        </div>
+    </body>
+</html>

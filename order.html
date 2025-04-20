@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Orders | Cravings</title>
+        <link rel="stylesheet" href="order.css">
+    </head>
+    <style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: #fffaf9;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 140px;
+  background-color: #fff;
+  padding-top: 20px;
+  border-right: 1px dotted #ccc;
+}
+
+.sidebar .item {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px dotted #ccc;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar .item:hover {
+  background-color: #fdf0ef;
+}
+
+/* Main Panel */
+.main {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Top Navigation */
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.menu-tab {
+  padding: 8px 14px;
+  border: 1px dotted #ff6b6b;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-tab.active {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.menu-tab:hover {
+  background-color: #ffeaea;
+}
+
+/* Order Status Buttons */
+.order-status {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.status-btn {
+  padding: 6px 12px;
+  font-size: 13px;
+  border: 1px dotted #ff6b6b;
+  background-color: transparent;
+  border-radius: 6px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.status-btn:hover {
+  background-color: #ffecec;
+  color: #ff6b6b;
+}
+
+/* Search Bar */
+.search-box {
+  margin: 20px 0;
+  padding: 10px 12px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-style: italic;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  transition: border-color 0.3s, box-shadow 0.2s;
+  outline: none;
+}
+
+/* Hover effect similar to Google */
+.search-box:hover {
+  border-color: #888;
+}
+
+/* Focus effect (soft highlight) */
+.search-box:focus {
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.2);
+}
+
+/* Order Display Area */
+.order-display {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.no-orders {
+  font-size: 18px;
+  color: #e75a5a;
+}
+    </style>
+    <body>
+        <div class="sidebar">
+            <div class="item">⭐ Rate Us</div>
+            <div class="item">⏱️ Logout</div>
+            <div class="item">❓ Help centre</div>
+            <div class="item">🏪 Outlet info</div>
+            <div class="item">💵 Payouts</div>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="menu-tab active">📦 Orders</div>
+                <div class="menu-tab">📋 Menu</div>
+                <div class="order-status">
+                    <button class="status-btn">Preparing 🕒</button>
+                    <button class="status-btn">Ready ✅</button>
+                    <button class="status-btn">Picked Up 📸</button>
+                </div>
+            </div>
+            <input placeholder="🔍 Look for orders by ID, food items or customer name" type="text" class="search-box">
+            <div class="order-display">
+                <p class="no-orders">No orders 😔</p>
+            </div>
+        </div>
+    </body>
+</html>
